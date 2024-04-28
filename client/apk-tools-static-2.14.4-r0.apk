@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpine Linux packages</title>
+    <link rel="stylesheet" href="/assets/pure-min.css">
+    <link rel="stylesheet" href="/assets/grids-responsive-min.css">
+    <link rel="stylesheet" href="/assets/hint.min.css">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+</head>
+<body>
+    <div id="wrapper">
+        <header class="pure-g" id="header">
+            <div class="pure-u-1 pure-u-lg-4-24">
+                <div class="logo">
+                    <a href="/"><img src="/assets/alpinelinux-logo.svg" class="pure-img" alt="" /></a>
+                </div>
+            </div>
+            <input type="checkbox" id="menu-toggle-cb">
+            <label id="menu-toggle" for="menu-toggle-cb" onclick>
+                <s class="bar"></s>
+                <s class="bar"></s>
+                <s class="bar"></s>
+            </label>
+            <div class="pure-u-1 pure-u-lg-20-24 box-relative menu-wrapper">
+                <nav class="pure-menu pure-menu-horizontal menu-local">
+                    <ul class="pure-menu-list">
+                        <li class="pure-menu-item"><a href="/packages" class="pure-menu-link">Packages</a></li>
+                        <li class="pure-menu-item"><a href="/contents" class="pure-menu-link">Contents</a></li>
+                        <li class="pure-menu-item"><a href="/flagged" class="pure-menu-link">Flagged</a></li>
+                    </ul>
+                </nav>
+                <nav class="pure-menu pure-menu-horizontal menu-external">
+                    <ul class="pure-menu-list">
+                        <li class="pure-menu-item"><a href="https://wiki.alpinelinux.org" class="pure-menu-link">wiki</a></li>
+                        <li class="pure-menu-item"><a href="https://git.alpinelinux.org" class="pure-menu-link">git</a></li>
+                        <li class="pure-menu-item"><a href="https://gitlab.alpinelinux.org/alpine/aports/-/issues" class="pure-menu-link">issues</a></li>
+                        <li class="pure-menu-item"><a href="https://mirrors.alpinelinux.org" class="pure-menu-link">mirrors</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+    <main id="package">
+        <div class="grid-head">Package details</div>
+        <div class="grid-body">
+            <div class="pure-g">
+                <div class="pure-u-1 pure-u-lg-15-24">
+                    <div class="table-responsive">
+                        <table class="pure-table pure-table-striped" id="package">
+                            <tr>
+                                <th class="header">Package</th>
+                                <td>apk-tools-static</td>
+                            </tr>
+                            <tr>
+                                <th class="header">Version</th>
+                                <td>
+                                    <strong>
+                                        <a class="hint--right text-success" aria-label="Flag this package out of date" href="&#x2F;flag&#x2F;main&#x2F;apk-tools&#x2F;2.14.4-r0">2.14.4-r0</a>
+                                    </strong>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="header">Description</th>
+                                <td>Alpine Package Keeper - static binary</td>
+                            </tr>
+                            <tr>
+                                <th class="header">Project</th>
+                                <td><a href="https:&#x2F;&#x2F;gitlab.alpinelinux.org&#x2F;alpine&#x2F;apk-tools">https:&#x2F;&#x2F;gitlab.alpinelinux.org&#x2F;alpine&#x2F;apk-tools</a></td>
+                            </tr>
+                            <tr>
+                                <th class="header">License</th>
+                                <td>GPL-2.0-only</td>
+                            </tr>
+                            <tr>
+                                <th class="header">Branch</th>
+                                <td>edge</td>
+                            </tr>
+                            <tr>
+                                <th class="header">Repository</th>
+                                <td>main</td>
+                            </tr>
+                            <tr>
+                                <th class="header">Architecture</th>
+                                <td>x86_64</td>
+                            </tr>
+                            <tr>
+                                <th class="header">Size</th>
+                                <td>1.86 MB</td>
+                            </tr>
+                            <tr>
+                                <th class="header">Installed size</th>
+                                <td>4.52 MB</td>
+                            </tr>
+                            <tr>
+                                <th class="header">Origin</th>
+                                <td><a href="&#x2F;package&#x2F;edge&#x2F;main&#x2F;x86_64&#x2F;apk-tools">apk-tools</a></td>
+                            </tr>
+                            <tr>
+                                <th class="header">Maintainer</th>
+                                <td>Natanael Copa</td>
+                            </tr>
+                            <tr>
+                                <th class="header">Build time</th>
+                                <td>2024-04-16 14:50:57</td>
+                            </tr>
+                            <tr>
+                                <th class="header">Commit</th>
+                                <td><a href="https:&#x2F;&#x2F;git.alpinelinux.org&#x2F;aports&#x2F;commit&#x2F;?id=d435c805af8af4171438da3ec3429c094aac4c6e">d435c805af8af4171438da3ec3429c094aac4c6e</a></td>
+                            </tr>
+                            <tr>
+                                <th class="header">Git repository</th>
+                                <td><a href="https:&#x2F;&#x2F;git.alpinelinux.org&#x2F;aports&#x2F;tree&#x2F;main&#x2F;apk-tools?h=master">Git repository</a></td>
+                            </tr>
+                            <tr>
+                                <th class="header">Build log</th>
+                                <td><a href="https:&#x2F;&#x2F;build.alpinelinux.org&#x2F;buildlogs&#x2F;build-edge-x86_64&#x2F;main&#x2F;apk-tools&#x2F;apk-tools-2.14.4-r0.log">Build log</a></td>
+                            </tr>
+                            <tr>
+                                <th class="header">Contents</th>
+                                <td><a href="&#x2F;contents?branch=edge&amp;name=apk%2dtools%2dstatic&amp;arch=x86_64&amp;repo=main">Contents of package</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="flag-button">
+                        <a class="pure-button" href="&#x2F;flag&#x2F;main&#x2F;apk-tools&#x2F;2.14.4-r0">Flag out of date</a>
+                    </div>
+                </div>
+                <div class="pure-u-1 pure-u-lg-3-24"></div>
+                <div class="pure-u-1 pure-u-lg-6-24 multi-fields">
+                    <details>
+                        <summary>Depends (2)</summary>
+                        <div class="pure-menu custom-restricted-width">
+                            <ul class="pure-menu-list">
+                                <li class="pure-menu-item"><a class="pure-menu-link" href="&#x2F;package&#x2F;edge&#x2F;main&#x2F;x86_64&#x2F;ca-certificates-bundle">ca-certificates-bundle</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="&#x2F;package&#x2F;edge&#x2F;main&#x2F;x86_64&#x2F;musl">musl</a></li>
+                                
+                            </ul>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>Required by (0)</summary>
+                        <div class="pure-menu custom-restricted-width">
+                            <ul class="pure-menu-list">
+                                
+                                <li class="pure-menu-item"><a class="pure-menu-link" href="">None</a></li>
+                            </ul>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>Sub Packages (6)</summary>
+                        <div class="pure-menu custom-restricted-width">
+                            <ul class="pure-menu-list">
+                                <li class="pure-menu-item"><a class="pure-menu-link" href="&#x2F;package&#x2F;edge&#x2F;main&#x2F;x86_64&#x2F;apk-tools">apk-tools</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="&#x2F;package&#x2F;edge&#x2F;main&#x2F;x86_64&#x2F;apk-tools-dbg">apk-tools-dbg</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="&#x2F;package&#x2F;edge&#x2F;main&#x2F;x86_64&#x2F;apk-tools-dev">apk-tools-dev</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="&#x2F;package&#x2F;edge&#x2F;main&#x2F;x86_64&#x2F;apk-tools-doc">apk-tools-doc</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="&#x2F;package&#x2F;edge&#x2F;main&#x2F;x86_64&#x2F;apk-tools-zsh-completion">apk-tools-zsh-completion</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="&#x2F;package&#x2F;edge&#x2F;main&#x2F;x86_64&#x2F;lua5.3-apk">lua5.3-apk</a></li>
+                                
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </main>
+        <footer>© Copyright 2020 Alpine Linux Development Team all rights reserved | <a href="https://alpinelinux.org/privacy-policy.html">Privacy Policy</a></footer>
+    </div>
+</body>
+</html>
