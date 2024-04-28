@@ -3,14 +3,15 @@ runtime: python311
 build:
   commands:
     build:
-      - curl -o apk-tools-static-2.14.4-r0.apk https://pkgs.alpinelinux.org/package/edge/main/x86_64/apk-tools-static
-      - tar -zxvf apk-tools-static-2.14.4-r0.apk
-      - cd sbin
-      - ./apk.static -X http://dl-cdn.alpinelinux.org/alpine/latest-stable/main -U --allow-untrusted --initdb add apk-tools-static
-      - apk.static update
-      - ./apk.static -X http://dl-cdn.alpinelinux.org/alpine/latest-stable/main -U --allow-untrusted add apk-tools
-      - apk update
-      - apk add pkg-config=0.29.2
+      # - curl -o apk-tools-static-2.14.4-r0.apk https://pkgs.alpinelinux.org/package/edge/main/x86_64/apk-tools-static
+      # - tar -zxvf apk-tools-static-2.14.4-r0.apk
+      # - cd sbin
+      # - ./apk.static -X http://dl-cdn.alpinelinux.org/alpine/latest-stable/main -U --allow-untrusted --initdb add apk-tools-static
+      # - apk.static update
+      # - ./apk.static -X http://dl-cdn.alpinelinux.org/alpine/latest-stable/main -U --allow-untrusted add apk-tools
+      # - apk update
+      # - apk add pkg-config=0.29.2
+      - yum install pkg-config -y
       # - apk add libmysqlclient-dev
       - pip3 install -r requirements.txt
   env:
