@@ -3,6 +3,9 @@ runtime: python311
 build:
   commands:
     build:
+      - apk update
+      - apk add pkg-config=0.29.2
+      # - apk add libmysqlclient-dev
       - pip3 install -r requirements.txt
   env:
     - name: DJANGO_SETTINGS_MODULE
