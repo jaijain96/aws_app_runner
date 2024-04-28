@@ -25,8 +25,9 @@ SECRET_KEY = 'django-insecure-xeyc+(6mj#q7fx(dx$(6&+4^tx694f%%j+gi&4qlol5@!&#2hy
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
 # ALLOWED_HOSTS = ["datalake-django-api-dot-gcloud-hands-on-417608.uc.r.appspot.com"]
+ALLOWED_HOSTS = ["49evsghbpr.us-west-2.awsapprunner.com"]
 
 # CSRF_COOKIE_SECURE = False
 # CSRF_COOKIE_HTTPONLY = False
