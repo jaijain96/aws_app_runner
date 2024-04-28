@@ -1,39 +1,18 @@
-# runtime: python311
-
-# service: datalake-django-api
-
-# instance_class: F4
-
-# # entrypoint: flask --app api run --port $PORT --with-threads
-# entrypoint: gunicorn datalake_from_scratch.wsgi
-
 version: 1.0
 runtime: python311
 build:
   commands:
-    # pre-build:
-    #   - wget -c https://s3.amazonaws.com/DOC-EXAMPLE-BUCKET/test-lib.tar.gz -O - | tar -xz
     build:
-      # - pip3 install pipenv
-      # - pipenv install
       - pip3 install -r requirements.txt
-    # post-build:
-    #   - gunicorn datalake_from_scratch.wsgi
   env:
     - name: DJANGO_SETTINGS_MODULE
       value: "datalake_from_scratch.settings"
-    # - name: MY_VAR_EXAMPLE
-    #   value: "example"
 run:
   runtime-version: 3.11
-  pre-run:  
-    # - pip3 install pipenv
-    # - pipenv install
-    # - python3 copy-global-files.py
+  pre-run:
     - pip3 install -r requirements.txt
     - python3 manage.py makemigrations
     - python3 manage.py migrate
-  # command: pipenv run gunicorn django_apprunner.wsgi --log-file -
   command: python3 -m gunicorn datalake_from_scratch.wsgi
   network:
     port: 8000

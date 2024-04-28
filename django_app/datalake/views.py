@@ -4,7 +4,6 @@ from django.views import View
 from datalake import models
 import json
 
-# Create your views here.
 class UserView(View):
     # def __init__(self):
     #     self.name_key = "user_view"

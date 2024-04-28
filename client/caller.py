@@ -30,12 +30,15 @@ url = f"{base_url}/user"
 response = requests.get(f"{url}/jaijain")
 response_print(response)
 
-# # response = requests.put(f"{url}/jaijain", json={"name": "old jai"}, auth=user_pass_basic_auth)
-# response = requests.put(f"{url}/jaijain", json={"password": "hello"})
-# response_print(response)
+# response = requests.put(f"{url}/jaijain", json={"name": "old jai"}, auth=user_pass_basic_auth)
+response = requests.put(f"{url}/jaijain", json={"password": "hello"})
+response_print(response)
 
-# # response = requests.patch(f"{url}/jaijain", json={"name": "new jai"})
-# # response_print(response)
+response = requests.get(f"{url}/jaijain")
+response_print(response)
+
+# response = requests.patch(f"{url}/jaijain", json={"name": "new jai"})
+# response_print(response)
 
 # response = requests.get(f"{url}/jaijain")
 # response_print(response)

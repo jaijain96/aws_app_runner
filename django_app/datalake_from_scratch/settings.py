@@ -25,14 +25,8 @@ SECRET_KEY = 'django-insecure-xeyc+(6mj#q7fx(dx$(6&+4^tx694f%%j+gi&4qlol5@!&#2hy
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = []
-# ALLOWED_HOSTS = ["datalake-django-api-dot-gcloud-hands-on-417608.uc.r.appspot.com"]
+# ALLOWED_HOSTS = ["*"] # for local?
 ALLOWED_HOSTS = ["49evsghbpr.us-west-2.awsapprunner.com"]
-
-# CSRF_COOKIE_SECURE = False
-# CSRF_COOKIE_HTTPONLY = False
-# SESSION_COOKIE_SECURE = False
-
 
 # Application definition
 
@@ -80,23 +74,22 @@ WSGI_APPLICATION = 'datalake_from_scratch.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
 # DATABASES = {
 #     'default': {
-#         "ENGINE": "django.db.backends.mysql",
-#         "NAME": "datalake_django",
-#         # "HOST": "127.0.0.1",
-#         # "PORT": "3306",
-#         "HOST": "/cloudsql/gcloud-hands-on-417608:us-central1:datalake-django-db",
-#         "USER": "root",
-#         "PASSWORD": "datalake-django-db"
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+DATABASES = {
+    'default': {
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": "datalake_django",
+        "HOST": "datalake-django-db.cvkqsysqm0um.us-west-2.rds.amazonaws.com",
+        "PORT": "3306",
+        "USER": "root",
+        "PASSWORD": "datalake-django-db"
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
