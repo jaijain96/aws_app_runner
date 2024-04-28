@@ -26,10 +26,11 @@ build:
     #   value: "example"
 run:
   runtime-version: 3.11
-  # pre-run:  
-  #   - pip3 install pipenv
-  #   - pipenv install
-  #   - python3 copy-global-files.py
+  pre-run:  
+    # - pip3 install pipenv
+    # - pipenv install
+    # - python3 copy-global-files.py
+    - pip3 install -r requirements.txt
   # command: pipenv run gunicorn django_apprunner.wsgi --log-file -
   command: python3 -m gunicorn datalake_from_scratch.wsgi
   network:
