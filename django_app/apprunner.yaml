@@ -14,7 +14,7 @@ build:
     # pre-build:
     #   - wget -c https://s3.amazonaws.com/DOC-EXAMPLE-BUCKET/test-lib.tar.gz -O - | tar -xz
     build:        
-      - pip install -r requiements.txt
+      - pip3 install -r requiements.txt
       # - pipenv install
     # post-build:
     #   - gunicorn datalake_from_scratch.wsgi
