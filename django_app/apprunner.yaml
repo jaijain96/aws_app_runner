@@ -31,6 +31,8 @@ run:
     # - pipenv install
     # - python3 copy-global-files.py
     - pip3 install -r requirements.txt
+    - python3 manage.py makemigrations
+    - python3 manage.py migrate
   # command: pipenv run gunicorn django_apprunner.wsgi --log-file -
   command: python3 -m gunicorn datalake_from_scratch.wsgi
   network:

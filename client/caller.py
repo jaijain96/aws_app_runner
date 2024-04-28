@@ -2,9 +2,7 @@ import asyncio, functools, time
 import requests
 
 base_url = "http://127.0.0.1"
-# base_url = "https://gcloud-hands-on-417608.uc.r.appspot.com"
-# base_url = "https://datalake-api-dot-gcloud-hands-on-417608.uc.r.appspot.com"
-base_url = "https://datalake-django-api-dot-gcloud-hands-on-417608.uc.r.appspot.com"
+base_url = "https://49evsghbpr.us-west-2.awsapprunner.com"
 port = "8000"
 
 auth_token = "ya29.a0Ad52N38cyCD4mYfRWdv86KE1ylSOrlEovt1jqBtUpuiYlpRmZ0_cerK7gmqNMIRs2vxknaCkrY9MVblnPwnrlsngUGUzK-anQkSuu5Sskl9VGC8gHXNKYYnP5x810KDN-zHzkJoBwCyE5Rzs0dV2uBO6KUvlWdRXlmAFWZlX_AaCgYKAXoSARESFQHGX2Mi4GqXCV7HUaMmycSl6F1etA0177"
@@ -32,15 +30,15 @@ url = f"{base_url}/user"
 response = requests.get(f"{url}/jaijain")
 response_print(response)
 
-# response = requests.put(f"{url}/jaijain", json={"name": "old jai"}, auth=user_pass_basic_auth)
-response = requests.put(f"{url}/jaijain", json={"password": "hello"})
-response_print(response)
-
-# response = requests.patch(f"{url}/jaijain", json={"name": "new jai"})
+# # response = requests.put(f"{url}/jaijain", json={"name": "old jai"}, auth=user_pass_basic_auth)
+# response = requests.put(f"{url}/jaijain", json={"password": "hello"})
 # response_print(response)
 
-response = requests.get(f"{url}/jaijain")
-response_print(response)
+# # response = requests.patch(f"{url}/jaijain", json={"name": "new jai"})
+# # response_print(response)
+
+# response = requests.get(f"{url}/jaijain")
+# response_print(response)
 
 # response = requests.delete(f"{url}/jaijain")
 # response_print(response)
