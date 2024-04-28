@@ -14,17 +14,20 @@ build:
       # - yum install pkg-config -y
       # - apk add libmysqlclient-dev
       - yum update -y
-      - yum install pkg-config -y
+      # - yum install pkg-config -y
       # rpm -Uvh https://repo.mysql.com/mysql80-community-release-el9-5.noarch.rpm
       # yum install mysql80-community-release-el9-5.noarch.rpm -y
       - yum install wget -y
       - wget https://dev.mysql.com/get/mysql80-community-release-el9-5.noarch.rpm
       - yum install mysql80-community-release-el9-5.noarch.rpm -y
-      - yum install yum-utils -y
+      # - yum install yum-utils -y
       # - yum-config-manager --disable mysql57-community
-      - yum-config-manager --enable mysql80-community
+      # - yum-config-manager --enable mysql80-community
       # - yum repolist enabled
-      - yum install mysql -y
+      # - yum install mysql -y
+      - yum install mysql-devel -y
+      - yum install gcc -y
+      - yum install python3-devel -y
       - pip3 install -r requirements.txt
   env:
     - name: DJANGO_SETTINGS_MODULE
