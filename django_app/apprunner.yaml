@@ -11,11 +11,19 @@ version: 1.0
 runtime: python311
 build:
   commands:
+    # pre-build:
+    #   - wget -c https://s3.amazonaws.com/DOC-EXAMPLE-BUCKET/test-lib.tar.gz -O - | tar -xz
     build:
       - pip3 install pipenv
+      - pipenv install     
+      # - pip3 install -r requirements.txt
+    # post-build:
+    #   - gunicorn datalake_from_scratch.wsgi
   env:
     - name: DJANGO_SETTINGS_MODULE
       value: "datalake_from_scratch.settings"
+    # - name: MY_VAR_EXAMPLE
+    #   value: "example"
 run:
   runtime-version: 3.11
   # pre-run:  
