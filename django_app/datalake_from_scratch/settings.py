@@ -79,25 +79,23 @@ WSGI_APPLICATION = 'datalake_from_scratch.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-# postgres://root:datalake-django-db@//cloudsql/PROJECT_ID:REGION:INSTANCE_NAME/DATABASE_NAME
 DATABASES = {
     'default': {
-        "ENGINE": "django.db.backends.mysql",
-        "NAME": "datalake_django",
-        # "HOST": "127.0.0.1",
-        # "PORT": "3306",
-        "HOST": "/cloudsql/gcloud-hands-on-417608:us-central1:datalake-django-db",
-        "USER": "root",
-        "PASSWORD": "datalake-django-db"
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
+# DATABASES = {
+#     'default': {
+#         "ENGINE": "django.db.backends.mysql",
+#         "NAME": "datalake_django",
+#         # "HOST": "127.0.0.1",
+#         # "PORT": "3306",
+#         "HOST": "/cloudsql/gcloud-hands-on-417608:us-central1:datalake-django-db",
+#         "USER": "root",
+#         "PASSWORD": "datalake-django-db"
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
