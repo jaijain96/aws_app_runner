@@ -32,9 +32,9 @@ run:
   #   - python3 copy-global-files.py
   # command: pipenv run gunicorn django_apprunner.wsgi --log-file -
   command: python3 -m gunicorn datalake_from_scratch.wsgi
-  # network: 
-  #   port: 8000
-  #   env: MY_APP_PORT  
+  network:
+    port: 8000
+    # env: MY_APP_PORT
   # env:
   #   - name: MY_VAR_EXAMPLE
   #     value: "example"
