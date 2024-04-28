@@ -31,7 +31,7 @@ run:
   #   - pipenv install
   #   - python3 copy-global-files.py
   # command: pipenv run gunicorn django_apprunner.wsgi --log-file -
-  command: gunicorn datalake_from_scratch.wsgi
+  command: python3 -m gunicorn datalake_from_scratch.wsgi
   # network: 
   #   port: 8000
   #   env: MY_APP_PORT  
