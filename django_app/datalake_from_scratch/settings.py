@@ -83,11 +83,11 @@ WSGI_APPLICATION = 'datalake_from_scratch.wsgi.application'
 DATABASES = {
     'default': {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": "datalake_django",
-        "HOST": "datalake-django-db.cvkqsysqm0um.us-west-2.rds.amazonaws.com",
+        "NAME": "",
+        "HOST": "",
         "PORT": "3306",
-        "USER": "root",
-        "PASSWORD": "datalake-django-db"
+        "USER": "",
+        "PASSWORD": ""
     }
 }
 
