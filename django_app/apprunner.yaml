@@ -1,0 +1,36 @@
+version: 1.0
+runtime: python311
+build:
+  commands:
+    build:
+      - yum update -y
+  env:
+    - name: DJANGO_SETTINGS_MODULE
+      value: "datalake_from_scratch.settings"
+run:
+  runtime-version: 3.11
+  pre-run:
+    - yum update -y
+    - yum install wget -y
+    - wget https://dev.mysql.com/get/mysql80-community-release-el9-5.noarch.rpm
+    - yum install mysql80-community-release-el9-5.noarch.rpm -y
+    - yum install mysql-devel -y
+    - yum install gcc -y
+    - yum install python3-devel -y
+    - pip3 install -r requirements.txt
+    - python3 manage.py makemigrations
+    - python3 manage.py migrate
+  command: python3 -m gunicorn datalake_from_scratch.wsgi
+  network:
+    port: 8000
+    # env: MY_APP_PORT
+  # env:
+  #   - name: MY_VAR_EXAMPLE
+  #     value: "example"
+  # secrets:
+  #   - name: my-secret
+  #     value-from: "arn:aws:secretsmanager:us-east-1:123456789012:secret:testingstackAppRunnerConstr-kJFXde2ULKbT-S7t8xR:username::"
+  #   - name: my-parameter
+  #     value-from: "arn:aws:ssm:us-east-1:123456789012:parameter/parameter-name"
+  #   - name: my-parameter-only-name
+  #     value-from: "parameter-name"
